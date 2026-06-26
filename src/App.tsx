@@ -4,6 +4,7 @@
  */
 
 import Navbar from './components/Navbar';
+import ReviewsSection from './components/ReviewsSection';
 import CTASection from './components/CTASection';
 import Footer from './components/Footer';
 import Home from './pages/Home';
@@ -20,6 +21,7 @@ export default function App() {
           <Route path="/product/:id" element={<ProductDetails />} />
         </Routes>
       </main>
+      <ReviewsSection />
       <CTASection />
       <Footer />
     </div>

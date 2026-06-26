@@ -1,4 +1,5 @@
 import HeroSlider from '../components/HeroSlider';
+import TrustStatsBar from '../components/TrustStatsBar';
 import AboutSection from '../components/AboutSection';
 import KitaCoolSection from '../components/KitaCoolSection';
 import OurRangeSection from '../components/OurRangeSection';
@@ -26,6 +27,7 @@ export default function Home() {
   return (
     <>
       <HeroSlider />
+      <TrustStatsBar />
       <AboutSection />
       <KitaCoolSection />
       <OurRangeSection />
