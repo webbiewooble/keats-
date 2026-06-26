@@ -5,24 +5,24 @@ import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 const slides = [
   {
     id: 1,
-    image: 'https://kitasystems.com/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-22-at-11.31.54-PM.jpeg',
-    title: 'Pure Water Solutions',
-    subtitle: 'Premium filtration systems for residential and commercial excellence.',
-    accent: 'Advanced Technology'
+    image: 'https://kitasystems.com/wp-content/uploads/2026/06/product-showcase-ultra-compressed.webp',
+    title: <><span className="text-black">PURE WATER.</span><br/><span className="text-[#0033a0]">SMART LIVING.</span></>,
+    subtitle: 'Advanced water treatment solutions for a healthier home and a better tomorrow.',
+    accent: <><span className="text-black">SOFTEN</span> <span className="text-gray-400">|</span> <span className="text-black">PURIFY</span> <span className="text-gray-400">|</span> <span className="text-[#0033a0]">PROTECT</span></>
   },
   {
     id: 2,
     image: 'https://images.unsplash.com/photo-1584622650111-993a426fbf0a?q=80&w=2000&auto=format&fit=crop',
-    title: 'Industrial Scale Filtration',
+    title: <span className="text-slate-900">Industrial Scale Filtration</span>,
     subtitle: 'Heavy-duty water purification designed for industrial demands.',
-    accent: 'Unmatched Capacity'
+    accent: <span className="text-brand-gold">Unmatched Capacity</span>
   },
   {
     id: 3,
     image: 'https://images.unsplash.com/photo-1616423640778-28d1b53229bd?q=80&w=2000&auto=format&fit=crop',
-    title: 'Sustainable Engineering',
+    title: <span className="text-slate-900">Sustainable Engineering</span>,
     subtitle: 'Eco-friendly water systems that protect our most valuable resource.',
-    accent: 'Future Forward'
+    accent: <span className="text-brand-gold">Future Forward</span>
   }
 ];
 
@@ -60,8 +60,8 @@ export default function HeroSlider() {
             className="absolute inset-0 bg-cover bg-right md:bg-center"
             style={{ backgroundImage: `url(${slides[current].image})` }}
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-brand-navy/90 via-brand-navy/50 to-transparent" />
-          <div className="absolute inset-0 bg-brand-navy/10" />
+          <div className="absolute inset-0 bg-gradient-to-r from-brand-navy/0 via-brand-navy/0 to-transparent" />
+          <div className="absolute inset-0 bg-brand-navy/0" />
 
           {/* Content */}
           <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-center pointer-events-none">
@@ -70,29 +70,30 @@ export default function HeroSlider() {
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
-                className="flex items-center gap-4 mb-6"
               >
-                <div className="h-px w-12 bg-brand-gold" />
-                <span className="text-brand-gold font-medium tracking-widest uppercase text-sm">
-                  {slides[current].accent}
-                </span>
-              </motion.div>
-              
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.5 }}
-              >
-                <h1 className="text-5xl md:text-7xl font-display font-bold text-white leading-tight mb-6">
+                <h1 className="text-5xl md:text-7xl font-display font-bold text-slate-900 leading-tight mb-4">
                   {slides[current].title}
                 </h1>
               </motion.div>
 
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.5 }}
+                className="flex flex-col gap-4 mb-6"
+              >
+                <div className="h-px w-full max-w-sm bg-slate-300" />
+                <span className="font-medium tracking-widest uppercase text-lg">
+                  {slides[current].accent}
+                </span>
+                <div className="h-px w-full max-w-sm bg-slate-300" />
+              </motion.div>
+              
               <motion.p
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.7 }}
-                className="text-lg md:text-xl text-brand-light-gray mb-10 max-w-xl leading-relaxed"
+                className="text-lg md:text-xl text-slate-800 mb-10 max-w-xl leading-relaxed"
               >
                 {slides[current].subtitle}
               </motion.p>
@@ -112,7 +113,7 @@ export default function HeroSlider() {
                 </a>
                 <a
                   href="#about"
-                  className="flex items-center gap-2 px-8 py-4 font-semibold text-white border border-white/20 hover:bg-white/10 transition-colors rounded"
+                  className="flex items-center gap-2 px-8 py-4 font-semibold text-slate-900 border border-slate-900/20 hover:bg-slate-900/10 transition-colors rounded"
                 >
                   Discover More
                 </a>
@@ -126,13 +127,13 @@ export default function HeroSlider() {
       <div className="absolute bottom-10 right-10 flex gap-4 z-20 hidden md:flex">
         <button
           onClick={prevSlide}
-          className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-brand-gold hover:text-brand-navy hover:border-brand-gold transition-all duration-300"
+          className="w-12 h-12 rounded-full border border-slate-900/20 flex items-center justify-center text-slate-900 hover:bg-brand-gold hover:text-brand-navy hover:border-brand-gold transition-all duration-300"
         >
           <ChevronLeft className="w-6 h-6" />
         </button>
         <button
           onClick={nextSlide}
-          className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white hover:bg-brand-gold hover:text-brand-navy hover:border-brand-gold transition-all duration-300"
+          className="w-12 h-12 rounded-full border border-slate-900/20 flex items-center justify-center text-slate-900 hover:bg-brand-gold hover:text-brand-navy hover:border-brand-gold transition-all duration-300"
         >
           <ChevronRight className="w-6 h-6" />
         </button>
@@ -145,7 +146,7 @@ export default function HeroSlider() {
             key={index}
             onClick={() => setCurrent(index)}
             className={`w-2 h-2 rounded-full transition-all duration-500 ${
-              current === index ? 'bg-brand-gold w-8' : 'bg-white/30 hover:bg-white/60'
+              current === index ? 'bg-brand-gold w-8' : 'bg-slate-900/30 hover:bg-slate-900/60'
             }`}
             aria-label={`Go to slide ${index + 1}`}
           />
