@@ -2,15 +2,17 @@ import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
 import {defineConfig} from 'vite';
+import { viteSingleFile } from 'vite-plugin-singlefile';
 
 export default defineConfig(() => {
   return {
+    root: 'src',
     base: './',
     build: {
-      outDir: 'docs',
-      emptyOutDir: true,
+      outDir: '../',
+      emptyOutDir: false,
     },
-    plugins: [react(), tailwindcss()],
+    plugins: [react(), tailwindcss(), viteSingleFile()],
     resolve: {
       alias: {
         '@': path.resolve(__dirname, '.'),

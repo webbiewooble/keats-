@@ -4,6 +4,7 @@
  */
 
 import Navbar from './components/Navbar';
+import CTASection from './components/CTASection';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import ProductDetails from './pages/ProductDetails';
@@ -19,6 +20,7 @@ export default function App() {
           <Route path="/product/:id" element={<ProductDetails />} />
         </Routes>
       </main>
+      <CTASection />
       <Footer />
     </div>
   );

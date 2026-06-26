@@ -13,12 +13,11 @@ export default function Footer() {
           {/* Brand Col */}
           <div className="space-y-6">
             <Link to="/#home" className="flex items-center gap-2 group inline-flex">
-              <div className="relative flex items-center justify-center w-8 h-8 rounded-full bg-brand-gold text-brand-navy transition-transform duration-300 group-hover:scale-110">
-                <Droplet className="w-5 h-5 fill-brand-navy" />
-              </div>
-              <span className="font-display font-bold text-xl tracking-tight text-white">
-                KITA<span className="text-brand-gold">WATER</span>
-              </span>
+              <img 
+                src="https://kitasystems.com/wp-content/uploads/2024/02/logo-1.png" 
+                alt="Kita Systems" 
+                className="h-10 w-auto brightness-0 invert opacity-90 group-hover:opacity-100 transition-opacity"
+              />
             </Link>
             <p className="text-brand-gray leading-relaxed text-sm">
               Premium corporate water filtration systems. Delivering unparalleled purity and engineering excellence for industrial and residential applications worldwide.

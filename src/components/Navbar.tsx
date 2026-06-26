@@ -41,12 +41,11 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between">
         {/* Logo */}
         <Link to="/#home" className="flex items-center gap-2 group">
-          <div className="relative flex items-center justify-center w-10 h-10 rounded-full bg-brand-gold text-brand-navy transition-transform duration-300 group-hover:scale-110">
-            <Droplet className="w-6 h-6 fill-brand-navy" />
-          </div>
-          <span className={`font-display font-bold text-xl tracking-tight transition-colors ${navbarScrolled ? 'text-brand-navy' : 'text-white'}`}>
-            KITA<span className="text-brand-gold">WATER</span>
-          </span>
+          <img 
+            src="https://kitasystems.com/wp-content/uploads/2024/02/logo-1.png" 
+            alt="Kita Systems" 
+            className={`h-12 w-auto transition-all duration-300 ${!navbarScrolled ? 'brightness-0 invert' : ''}`}
+          />
         </Link>
 
         {/* Desktop Navigation */}
