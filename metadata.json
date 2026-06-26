@@ -1,0 +1,8 @@
+{
+  "name": "Kita Water Systems",
+  "description": "Premium corporate website for Kita Water Systems featuring a sleek dark blue and gold design with professional animations.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
