@@ -1,12 +1,5 @@
 import { motion } from 'motion/react';
-import { CheckCircle2 } from 'lucide-react';
-
-const features = [
-  'Advanced reverse osmosis technology',
-  'Industrial-grade purification systems',
-  '24/7 maintenance and support',
-  'Eco-friendly water conservation'
-];
+import { CheckCircle2, Quote } from 'lucide-react';
 
 export default function AboutSection() {
   return (
@@ -25,13 +18,13 @@ export default function AboutSection() {
             transition={{ duration: 0.8 }}
             className="relative"
           >
-            <div className="relative rounded-lg overflow-hidden border border-white/10 shadow-2xl">
+            <div className="relative rounded-lg overflow-hidden border border-gray-100 shadow-[0_20px_40px_rgba(10,25,47,0.08)]">
               <img 
                 src="https://images.unsplash.com/photo-1574620610344-938b8137397e?q=80&w=1600&auto=format&fit=crop" 
                 alt="Water filtration facility" 
                 className="w-full h-auto object-cover aspect-[4/3] grayscale hover:grayscale-0 transition-all duration-700"
               />
-              <div className="absolute inset-0 bg-brand-navy/40 hover:bg-transparent transition-all duration-700" />
+              <div className="absolute inset-0 bg-brand-navy/10 hover:bg-transparent transition-all duration-700" />
             </div>
             
             {/* Floating Badge */}
@@ -40,11 +33,12 @@ export default function AboutSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="absolute -bottom-8 -right-8 bg-white p-8 rounded border-t-4 border-brand-gold shadow-[0_20px_40px_rgba(10,25,47,0.1)] hidden md:block"
+              className="absolute -bottom-8 -right-8 bg-white p-8 rounded border-t-4 border-brand-gold shadow-[0_20px_40px_rgba(10,25,47,0.1)] hidden md:block max-w-xs"
             >
-              <div className="text-5xl font-display font-bold text-brand-navy mb-2">25+</div>
-              <div className="text-gray-500 font-medium uppercase tracking-wider text-sm">
-                Years of <br/> Excellence
+              <Quote className="w-10 h-10 text-brand-gold/30 absolute -top-4 -left-4" />
+              <div className="text-xl font-display font-bold text-brand-navy mb-2">KITA is Japanese for "happiness."</div>
+              <div className="text-gray-500 font-medium text-sm leading-relaxed">
+                It's not a tagline — it's the standard we hold every product to.
               </div>
             </motion.div>
           </motion.div>
@@ -64,28 +58,23 @@ export default function AboutSection() {
             </div>
             
             <h2 className="text-4xl md:text-5xl font-display font-bold text-brand-navy leading-tight mb-6">
-              Setting the Gold Standard in Water Filtration.
+              Welcome to Kita Systems India Pvt. Ltd.
             </h2>
             
-            <p className="text-gray-600 text-lg mb-8 leading-relaxed">
-              At Kita Water Systems, we blend state-of-the-art engineering with uncompromising quality. We specialize in designing, deploying, and maintaining premium water purification solutions that meet the rigorous demands of both industrial complexes and modern residential spaces.
-            </p>
-
-            <ul className="space-y-4 mb-10">
-              {features.map((feature, idx) => (
-                <motion.li
-                  key={idx}
-                  initial={{ opacity: 0, y: 10 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: 0.2 + (idx * 0.1) }}
-                  className="flex items-start gap-3"
-                >
-                  <CheckCircle2 className="w-6 h-6 text-brand-gold shrink-0 mt-0.5" />
-                  <span className="text-brand-navy font-medium text-lg">{feature}</span>
-                </motion.li>
-              ))}
-            </ul>
+            <div className="space-y-4 mb-8">
+              <p className="text-gray-600 text-lg leading-relaxed font-medium">
+                We didn't start as a manufacturer. Over ten years ago, Kita began as a supplier of water treatment spare parts — the unglamorous, behind-the-scenes work that keeps other people's systems running.
+              </p>
+              <p className="text-gray-600 leading-relaxed">
+                That work put us in close contact with industry leaders like Nasaka (Okaya), Blue Mount, Bluebird, and Hindware, and it gave us a front-row seat to how water treatment equipment is actually built. What we saw convinced us we could build it better. So we did.
+              </p>
+              <p className="text-gray-600 leading-relaxed">
+                Today, Kita Systems designs and manufactures water treatment solutions engineered to cut recurring costs and increase output — starting with a decision almost no one else in the market has made: <strong className="text-brand-navy">building our water softeners and sand filters with stainless steel vessels instead of plastic or FRP.</strong> It's the only fully developed product of its kind available in India, and the water it treats is non-toxic by design.
+              </p>
+              <p className="text-gray-600 leading-relaxed">
+                We didn't stop at water. Our in-house team of engineers and industry veterans has gone on to build home appliances aimed at the same goal that started this company — making everyday life a little easier, a little healthier, and a little happier.
+              </p>
+            </div>
 
             <motion.a
               href="#services"
@@ -93,7 +82,7 @@ export default function AboutSection() {
               whileTap={{ scale: 0.98 }}
               className="inline-flex items-center gap-2 bg-brand-navy border-2 border-brand-navy text-white px-8 py-4 font-semibold hover:bg-brand-gold hover:border-brand-gold hover:text-brand-navy transition-colors rounded"
             >
-              Learn More About Us
+              Explore Our Solutions
             </motion.a>
           </motion.div>
 

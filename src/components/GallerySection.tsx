@@ -1,14 +1,29 @@
 import { motion } from 'motion/react';
-import { products } from '../data/products';
 
 export default function GallerySection() {
-  // Combine all images from products for the gallery, up to 12 images
   const allImages = [
-    ...products.waterAppliances.map(p => p.image),
-    ...products.homeAppliances.map(p => p.image),
-    ...products.treatments.map(p => p.image),
-    ...products.ionizers.map(p => p.image)
-  ].filter((v, i, a) => a.indexOf(v) === i).slice(0, 12); // Unique images
+    "https://kitasystems.com/wp-content/uploads/2024/04/IMG-20240411-WA0047.jpg",
+    "https://kitasystems.com/wp-content/uploads/2024/04/IMG-20240411-WA0052.jpg",
+    "https://kitasystems.com/wp-content/uploads/2024/04/IMG-20240411-WA0051.jpg",
+    "https://kitasystems.com/wp-content/uploads/2024/04/IMG-20240411-WA0050.jpg",
+    "https://kitasystems.com/wp-content/uploads/2024/04/IMG-20240411-WA0049.jpg",
+    "https://kitasystems.com/wp-content/uploads/2024/04/WhatsApp-Image-2024-04-11-at-12.04.45_df4de1cd.jpg",
+    "https://kitasystems.com/wp-content/uploads/2024/04/IMG-20240411-WA0055.jpg",
+    "https://kitasystems.com/wp-content/uploads/2024/04/IMG-20240411-WA0054.jpg",
+    "https://kitasystems.com/wp-content/uploads/2024/04/IMG-20240411-WA0053.jpg",
+    "https://kitasystems.com/wp-content/uploads/2024/04/IMG-20240411-WA0057.jpg",
+    "https://kitasystems.com/wp-content/uploads/2024/04/IMG-20240411-WA0056.jpg",
+    "https://kitasystems.com/wp-content/uploads/2024/04/IMG-20240411-WA0061.jpg",
+    "https://kitasystems.com/wp-content/uploads/2024/04/IMG-20240411-WA0060.jpg",
+    "https://kitasystems.com/wp-content/uploads/2024/04/IMG-20240411-WA0059.jpg",
+    "https://kitasystems.com/wp-content/uploads/2024/04/IMG-20240411-WA0058.jpg",
+    "https://kitasystems.com/wp-content/uploads/2024/04/IMG-20240411-WA0062.jpg",
+    "https://kitasystems.com/wp-content/uploads/2024/04/IMG-20240411-WA0064.jpg",
+    "https://kitasystems.com/wp-content/uploads/2024/04/IMG-20240411-WA0063.jpg",
+    "https://kitasystems.com/wp-content/uploads/2024/04/WhatsApp-Image-2024-04-11-at-11.58.21_af086816.jpg",
+    "https://kitasystems.com/wp-content/uploads/2024/04/WhatsApp-Image-2024-04-11-at-12.00.18_13d98607.jpg",
+    "https://kitasystems.com/wp-content/uploads/2024/04/WhatsApp-Image-2024-04-11-at-12.00.19_096ea015.jpg"
+  ];
 
   return (
     <section id="gallery" className="py-24 bg-brand-navy relative overflow-hidden">
@@ -55,7 +70,7 @@ export default function GallerySection() {
               <img 
                 src={src} 
                 alt={`Gallery image ${idx + 1}`} 
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 mix-blend-screen"
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
               />
               <div className="absolute inset-0 bg-brand-navy/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
                 <div className="w-12 h-12 rounded-full border border-brand-gold text-brand-gold flex items-center justify-center transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">

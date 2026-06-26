@@ -1,5 +1,6 @@
 import HeroSlider from '../components/HeroSlider';
 import AboutSection from '../components/AboutSection';
+import KitaCoolSection from '../components/KitaCoolSection';
 import ProductGrid from '../components/ProductGrid';
 import GallerySection from '../components/GallerySection';
 import { products } from '../data/products';
@@ -25,6 +26,7 @@ export default function Home() {
     <>
       <HeroSlider />
       <AboutSection />
+      <KitaCoolSection />
       
       <ProductGrid 
         id="services"
