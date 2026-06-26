@@ -5,7 +5,7 @@ import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 const slides = [
   {
     id: 1,
-    image: 'https://images.unsplash.com/photo-1548883354-7622d03aca27?q=80&w=2000&auto=format&fit=crop',
+    image: 'https://kitasystems.com/wp-content/uploads/2026/06/WhatsApp-Image-2026-06-22-at-11.31.54-PM.jpeg',
     title: 'Pure Water Solutions',
     subtitle: 'Premium filtration systems for residential and commercial excellence.',
     accent: 'Advanced Technology'
@@ -57,15 +57,15 @@ export default function HeroSlider() {
         >
           {/* Background Image with Overlay */}
           <div
-            className="absolute inset-0 bg-cover bg-center"
+            className="absolute inset-0 bg-cover bg-right md:bg-center"
             style={{ backgroundImage: `url(${slides[current].image})` }}
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-brand-navy/90 via-brand-navy/60 to-transparent" />
-          <div className="absolute inset-0 bg-brand-navy/30" />
+          <div className="absolute inset-0 bg-gradient-to-r from-brand-navy/90 via-brand-navy/50 to-transparent" />
+          <div className="absolute inset-0 bg-brand-navy/10" />
 
           {/* Content */}
-          <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-center">
-            <div className="max-w-3xl">
+          <div className="relative h-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col justify-center pointer-events-none">
+            <div className="max-w-3xl pointer-events-auto">
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}

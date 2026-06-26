@@ -13,10 +13,15 @@ export default function ProductDetails() {
 
   // Find product in all categories
   const allProducts = [
-    ...products.waterAppliances,
-    ...products.homeAppliances,
-    ...products.treatments,
-    ...products.ionizers
+    ...products.ionizers,
+    ...products.sandFilters,
+    ...products.ironFilters,
+    ...products.softeners,
+    ...products.carbonFilters,
+    ...products.waterCoolers,
+    ...products.purifiers,
+    ...products.industrialRO,
+    ...products.other
   ];
   
   const product = allProducts.find(p => p.id === id);
