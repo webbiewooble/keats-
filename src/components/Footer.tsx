@@ -42,11 +42,18 @@ export default function Footer() {
               <span className="absolute -bottom-2 left-0 w-1/2 h-0.5 bg-brand-gold"></span>
             </h4>
             <ul className="space-y-3">
-              {['Home', 'About Us', 'Our Services', 'Project Gallery', 'Careers', 'Contact'].map((link) => (
-                <li key={link}>
-                  <Link to="/#home" className="text-brand-gray hover:text-brand-gold transition-colors text-sm flex items-center gap-2">
+              {[
+                { name: 'Home', path: '/#home' },
+                { name: 'About Us', path: '/#about' },
+                { name: 'Water Appliances', path: '/#purifiers' },
+                { name: 'Our Locations', path: '/locations' },
+                { name: 'Project Gallery', path: '/#gallery' },
+                { name: 'Contact Us', path: '/#contact' }
+              ].map((link) => (
+                <li key={link.name}>
+                  <Link to={link.path} className="text-brand-gray hover:text-brand-gold transition-colors text-sm flex items-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-brand-gold/50" />
-                    {link}
+                    {link.name}
                   </Link>
                 </li>
               ))}
