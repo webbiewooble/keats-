@@ -26,6 +26,7 @@ export default function Navbar() {
     { name: 'Home', href: '/#home' },
     { name: 'About Us', href: '/#about' },
     { name: 'Water Appliances', href: '/#purifiers' },
+    { name: 'Our Locations', href: '/locations' },
     { name: 'Water Ionizers', href: '/#ionizers' },
     { name: 'Water Treatments', href: '/#sand-filters' },
     { name: 'Home Appliances', href: '/#home-appliances' },
