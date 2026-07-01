@@ -1,16 +1,27 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 @import "tailwindcss";
 
 @theme {
-  --color-brand-navy: #0A192F;
-  --color-brand-dark: #112240;
-  --color-brand-light: #233554;
-  --color-brand-gold: #D4AF37;
-  --color-brand-gold-hover: #F1C40F;
-  --color-brand-gold-light: rgba(212, 175, 55, 0.1);
+  --color-brand-navy: #004F9F;
+  --color-brand-dark: #00366D;
+  --color-brand-light: #0085D5;
+  --color-brand-gold: #00B5E2;
+  --color-brand-gold-hover: #009DCA;
+  --color-brand-gold-light: rgba(0, 181, 226, 0.1);
   --color-brand-white: #FFFFFF;
-  --color-brand-gray: #8892B0;
-  --color-brand-light-gray: #CCD6F6;
+  --color-brand-gray: #333333;
+  --color-brand-light-gray: #F4F4F4;
+
+  --color-ocean: #FFFFFF;
+  --color-ocean-light: #F4F4F4;
+  --color-ocean-lighter: #EAEAEA;
+  --color-cyan: #0085D5;
+  --color-cyan-hover: #006FB3;
+  --color-aqua: #00A3E0;
+  
+  --color-soft-white: #FFFFFF;
+  --color-light-gray: #F4F4F4;
+  --color-glass: #FFFFFF;
 
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
@@ -18,21 +29,37 @@
 
 body {
   background-color: var(--color-brand-white);
-  color: var(--color-brand-navy);
+  color: #333333;
   overflow-x: hidden;
 }
 
-/* Custom scrollbar for a premium feel */
 ::-webkit-scrollbar {
   width: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: var(--color-brand-navy);
+  background: var(--color-brand-white);
 }
 ::-webkit-scrollbar-thumb {
-  background: var(--color-brand-light);
-  border-radius: 5px;
+  background: #CBD5E0;
+  border-radius: 0px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-brand-gold);
+  background: #A0AAB5;
+}
+
+.glass-panel {
+  background: #FFFFFF;
+  border: 1px solid #EAEAEA;
+}
+
+.text-gradient {
+  color: #004F9F;
+}
+
+.text-gradient-cyan {
+  color: #0085D5;
+}
+
+.mesh-bg {
+  background-color: #F4F4F4;
 }

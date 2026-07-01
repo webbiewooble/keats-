@@ -17,8 +17,6 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
   
-  // If we are not on the home page, make the navbar always look scrolled (white bg)
-  // because the hero image is only on the home page.
   const isHomePage = location.pathname === '/';
   const navbarScrolled = isScrolled || !isHomePage;
 
@@ -27,10 +25,6 @@ export default function Navbar() {
     { name: 'About Us', href: '/#about' },
     { name: 'Water Appliances', href: '/#purifiers' },
     { name: 'Our Locations', href: '/locations' },
-    { name: 'Water Ionizers', href: '/#ionizers' },
-    { name: 'Water Treatments', href: '/#sand-filters' },
-    { name: 'Home Appliances', href: '/#home-appliances' },
-    { name: 'Gallery', href: '/#gallery' },
     { name: 'Contact Us', href: '/#contact' },
   ];
 
@@ -38,8 +32,8 @@ export default function Navbar() {
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         navbarScrolled 
-          ? 'bg-brand-navy/95 backdrop-blur-md shadow-lg shadow-brand-navy/20 py-3' 
-          : 'bg-gradient-to-b from-brand-navy/80 via-brand-navy/35 to-transparent py-4 lg:py-6'
+          ? 'bg-white shadow-sm border-b border-gray-200 py-3' 
+          : 'bg-white/95 backdrop-blur-sm border-b border-gray-200 py-4 lg:py-6'
       }`}
     >
       <div className="w-full mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-20 flex items-center justify-between gap-4">
@@ -48,22 +42,20 @@ export default function Navbar() {
           <img 
             src="https://kitasystems.com/wp-content/uploads/2024/02/logo-1.png" 
             alt="Kita Systems" 
-            className="h-10 xl:h-12 w-auto transition-all duration-300 brightness-0 invert"
+            className="h-10 xl:h-12 w-auto transition-all duration-300"
           />
         </Link>
 
         {/* Desktop Navigation */}
-        <nav className="hidden xl:flex items-center gap-4 2xl:gap-8 flex-1 justify-center">
+        <nav className="hidden xl:flex items-center gap-6 2xl:gap-8 flex-1 justify-center">
           {navLinks.map((link) => (
             <Link
               key={link.name}
               to={link.href}
-              className={`text-[13px] 2xl:text-[15px] font-semibold transition-colors relative group ${
-                navbarScrolled ? 'text-brand-light-gray hover:text-brand-gold' : 'text-white hover:text-brand-gold'
-              }`}
+              className={`text-[14px] 2xl:text-[15px] font-semibold transition-colors relative group text-brand-navy hover:text-brand-light`}
             >
               {link.name}
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-gold transition-all duration-300 group-hover:w-full"></span>
+              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-light transition-all duration-300 group-hover:w-full"></span>
             </Link>
           ))}
         </nav>
@@ -71,19 +63,15 @@ export default function Navbar() {
         <div className="hidden xl:block flex-shrink-0">
           <Link
             to="/#contact"
-            className={`px-6 py-2.5 bg-transparent border text-[13px] 2xl:text-[15px] font-semibold rounded transition-all duration-300 block ${
-              navbarScrolled 
-                ? 'border-brand-gold text-brand-gold hover:bg-brand-gold hover:text-brand-navy' 
-                : 'border-white text-white hover:bg-white hover:text-brand-navy'
-            }`}
+            className={`px-8 py-3 text-[14px] font-bold rounded-sm transition-all duration-300 block border-2 border-brand-navy bg-brand-navy text-white hover:bg-brand-light hover:border-brand-light`}
           >
-            Get a Quote
+            Contact Us
           </Link>
         </div>
 
         {/* Mobile Menu Toggle */}
         <button
-          className="xl:hidden p-2 transition-colors flex-shrink-0 text-white hover:text-brand-gold"
+          className="xl:hidden p-2 transition-colors flex-shrink-0 text-brand-navy hover:text-brand-light"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
         >
           {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -97,7 +85,7 @@ export default function Navbar() {
             initial={{ opacity: 0, height: 0 }}
             animate={{ opacity: 1, height: 'auto' }}
             exit={{ opacity: 0, height: 0 }}
-            className="xl:hidden bg-brand-dark border-t border-brand-light overflow-hidden"
+            className="xl:hidden bg-white border-t border-brand-light-gray overflow-hidden shadow-lg"
           >
             <nav className="flex flex-col px-4 py-6 gap-4">
               {navLinks.map((link) => (
@@ -105,7 +93,7 @@ export default function Navbar() {
                   key={link.name}
                   to={link.href}
                   onClick={() => setMobileMenuOpen(false)}
-                  className="text-brand-light-gray hover:text-brand-gold text-lg font-medium transition-colors"
+                  className="text-brand-navy hover:text-brand-light text-lg font-medium transition-colors"
                 >
                   {link.name}
                 </Link>
@@ -113,9 +101,9 @@ export default function Navbar() {
               <Link
                 to="/#contact"
                 onClick={() => setMobileMenuOpen(false)}
-                className="mt-4 text-center px-6 py-3 bg-brand-gold text-brand-navy font-medium rounded transition-colors"
+                className="mt-4 text-center px-6 py-3 bg-brand-navy text-white font-medium rounded-sm transition-colors hover:bg-brand-light"
               >
-                Get a Quote
+                Contact Us
               </Link>
             </nav>
           </motion.div>

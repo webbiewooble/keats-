@@ -69,8 +69,8 @@ export default function ProductDetails() {
             transition={{ duration: 0.6 }}
           >
             <div className="flex items-center gap-4 mb-4">
-              <div className="h-px w-8 bg-brand-gold" />
-              <span className="text-brand-gold font-medium tracking-widest uppercase text-xs">
+              <div className="h-px w-8 bg-brand-light" />
+              <span className="text-brand-light font-medium tracking-widest uppercase text-xs">
                 Product Details
               </span>
             </div>
@@ -88,7 +88,7 @@ export default function ProductDetails() {
               <ul className="space-y-3">
                 {['Premium Build Quality', 'Advanced Filtration Technology', 'High Performance Capacity', 'Energy Efficient Operation'].map((feature, idx) => (
                   <li key={idx} className="flex items-start gap-3">
-                    <CheckCircle2 className="w-5 h-5 text-brand-gold shrink-0 mt-0.5" />
+                    <CheckCircle2 className="w-5 h-5 text-brand-light shrink-0 mt-0.5" />
                     <span className="text-gray-700">{feature}</span>
                   </li>
                 ))}
@@ -98,13 +98,13 @@ export default function ProductDetails() {
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
                 to="/#contact"
-                className="inline-flex justify-center items-center gap-2 bg-brand-navy text-white px-8 py-4 font-semibold hover:bg-brand-gold hover:text-brand-navy transition-colors rounded shadow-lg"
+                className="inline-flex justify-center items-center gap-2 bg-brand-navy text-white px-8 py-4 font-semibold hover:bg-brand-light transition-colors rounded-sm shadow-lg"
               >
                 Request a Quote
               </Link>
               <a
-                href="mailto:info@kitawater.com"
-                className="inline-flex justify-center items-center gap-2 bg-white border-2 border-gray-200 text-brand-navy px-8 py-4 font-semibold hover:border-brand-navy transition-colors rounded"
+                href="mailto:contact@xylem.com"
+                className="inline-flex justify-center items-center gap-2 bg-white border-2 border-brand-navy text-brand-navy px-8 py-4 font-semibold hover:bg-brand-navy hover:text-white transition-colors rounded-sm"
               >
                 Contact Sales
               </a>
